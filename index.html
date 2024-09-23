@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhi's Smile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3em;
+        }
+
+        .smiley {
+            width: 120px;
+            height: 120px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        /* Eyes */
+        .smiley::before, .smiley::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+        }
+
+        .smiley::before {
+            left: 30px;
+        }
+
+        .smiley::after {
+            right: 30px;
+        }
+
+        /* Smile */
+        .smile {
+            width: 60px;
+            height: 30px;
+            border: 5px solid black;
+            border-color: transparent transparent black transparent;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hii, my name is Abhi!</h1>
+        <div class="smiley">
+            <div class="smile"></div>
+        </div>
+    </div>
+</body>
+</html>
